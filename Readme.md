@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алина Романова](https://up.htmlacademy.ru/htmlcss/34/user/2091865).
-* Наставник: `Сергей Артемов`.
+* Наставник: [Сергей Артемов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
