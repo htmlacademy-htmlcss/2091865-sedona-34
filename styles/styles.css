@@ -331,7 +331,7 @@ div {
 	color: #000000;
 }
 
-/* Форма e-mail в секции Рассылка*/
+/* Форма Email на грид*/
 .newsletter-form {
 	display: grid;
 	grid-template-columns: 1fr auto;
