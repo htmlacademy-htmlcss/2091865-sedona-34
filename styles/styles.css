@@ -62,29 +62,20 @@ body {
 }
 
 .button-hotel-search {
+	display: block;
 	font-size: 20px;
 	line-height: 36px;
 	background-color: #756157;
 	border-radius: 4px;
 	padding: 12px 15px;
-	width: 574px;
-	height: 36px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-	position: absolute;
-	justify-content: space-around;
+	width: 544px;
+	margin-left: 313px;
+	margin-right: 313px;
 }
 
 .button-blue {
 	font-size: 16px;
 	line-height: 20px;
-	background-color: #82b3d3;
-}
-
-.button-blue-newsletter {
-	font-size: 20px;
-	line-height: 36px;
 	background-color: #82b3d3;
 }
 
@@ -95,30 +86,34 @@ body {
 }
 
 .button-wanthere {
+	display: block;
 	border-radius: 4px;
 	padding: 9px 15px 8px;
 	margin-top: 14px;
-	display: flex;
-	align-items: center;
-	text-align: center;
+	margin-bottom: 14px;
+	width: 130px;
 }
 
-/*Page Header*/
-.page-header {
-	min-height: 65px;
-	height: 65px;
-}
 
 /* Navigation */
 .navigation {
 	display: flex;
+	justify-content: space-between;
+	margin-bottom: -5px;
+	margin-right: 70px;
+	margin-left: 70px;
 }
 
 .navigation-logo {
 	width: 140px;
+	height: 70px;
 	display: block;
 	margin-right: 30px;
-	margin-left: 70px;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 .navigation-list {
@@ -126,25 +121,28 @@ body {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-	min-width: 390px;
+	min-width: 450px;
 	list-style-type: none;
 }
 
 .navigation-user {
-	min-width: 270px;
-	margin-left: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin: 0;
+	padding: 0;
+	width: 300px;
 }
 
 .navigation-user .navigation-link {
 	min-width: 18px;
 	min-height: 18px;
+	padding: 24px 12px;
 }
 
 .navigation-link {
 	display: block;
-	padding-top: 20px;
-	padding-right: 34px;
-	padding-bottom: 19px;
+	padding: 20px 17px;
 	font-size: 20px;
 	line-height: 26px;
 	font-weight: 700;
@@ -155,15 +153,16 @@ body {
 	text-transform: capitalize;
 }
 
-.navigation-hotels {
-	padding-right: 0;
+.navigation-button {
+	margin-left: 20px;
 }
 
-.navigation-home {
-	padding-left: 17px;
-}
 
 /* Main */
+
+.main-container {
+	flex-grow: 1;
+}
 
 .main-picture-welcome {
 	display: block;
@@ -176,13 +175,11 @@ body {
 	background-image: url("../images/index-background.jpg");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-	min-height: 485px;
-	margin-bottom: 63px;
 }
 
 .main-intro {
-	min-height: 282px;
-	width: 1200px;
+	margin-top: 63px;
+	margin-bottom: 90px;
 }
 
 .introduce-title {
@@ -199,12 +196,16 @@ body {
 	line-height: 26px;
 	text-align: center;
 	margin: 0;
-	margin-bottom: 90px;
+}
+
+/* Поиск гостниц в Седоне */
+.hotel-search {
+	margin-top: 91px;
+	margin-bottom: 93px;
 }
 
 .introduce-title-hotelsearch {
 	margin: 0;
-	margin-top: 91px;
 	margin-bottom: 29px;
 }
 
@@ -234,7 +235,6 @@ div {
 }
 
 .advantages-item {
-	min-height: 384px;
 	align-items: center;
 	width: 400px;
 	background: rgba(131, 179, 211, 0.12);
@@ -307,80 +307,110 @@ div {
 	margin-bottom: 102px;
 }
 
-/* Hotel search section */
-
-.hotel-search {
-	min-height: 417px;
-}
-
-/* Mailing list section */
+/* Секция Подпишитесь на рассылку */
 .newsletter {
-	min-height: 411px;
 	color: #ffffff;
 	background-image: url("../images/background.png");
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
 
+.introduce-title-newsletter {
+	margin: 0;
+	padding-top: 94px;
+	padding-bottom: 29px;
+}
+
+.introduce-description-newsletter {
+	margin: 0;
+	padding-bottom: 46px;
+}
+
 .newsletter-catalog {
-	min-height: 411px;
 	background-color: #ffffff;
 	color: #000000;
 }
 
-/* Footer */
-.page-footer {
-	min-height: 120px;
+/* Форма e-mail в секции Рассылка*/
+.newsletter-form {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding-bottom: 94px;
 }
 
-.page-footer-container {
+.field {
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border: none;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	background-color: #f2f2f2;
+	font-family: inherit;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+	padding: 20px 22px 19px;
+}
+
+.button-blue-newsletter {
+	font-size: 20px;
+	line-height: 36px;
+	background-color: #82b3d3;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+	min-width: 200px;
+	height: 60px;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+/* Footer */
+.page-footer {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 45px 70px 35px 70px;
+	align-items: center;
 }
 
 .footer-social-list {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0;
-	margin-left: 81px;
 	padding: 0;
 	list-style-type: none;
 }
 
 .footer-social-item {
+	width: 48px;
+	height: 40px;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+.button-social {
 	background: #83b3d3;
-	width: 22px;
-	height: 14px;
-	margin-top: 58px;
-	margin-bottom: 48px;
-	margin-right: 28px;
-}
-
-.footer-social-item:nth-child(3) {
-	margin-right: 0;
-}
-
-.contacts-phone {
-	margin-top: 45px;
-	margin-bottom: 35px;
 }
 
 .contacts {
+	padding: 0;
+}
+
+.contacts-phone {
+	margin: 0;
 	font-size: 40px;
 	line-height: 40px;
 }
 
 .html-academy-logo {
 	display: block;
-	margin: 0;
-	padding: 0;
-	padding-top: 49px;
-	padding-bottom: 39px;
-}
-
-
-.field {
-	background-color: #f2f2f2;
+	position: relative;
+	min-width: 115px;
+	min-height: 33px;
 }
 
 /* Каталог */
@@ -396,10 +426,7 @@ div {
 	min-height: 403px;
 	color: #ffffff;
 	background-color: #000000;
-}
-
-.catalog-wrapper {
-	min-width: 1212px;
+	margin-bottom: 55px;
 }
 
 .catolog-filter {
@@ -423,7 +450,7 @@ div {
 	text-align: center;
 }
 
-/* Каталог Хлебные крошки*/
+/*Хлебные крошки*/
 .breadcrumbs {
 	display: flex;
 	margin: 0;
@@ -443,22 +470,88 @@ div {
 }
 
 /* Каталог Карточки */
+.container-hotel-card {
+	width: 1056px;
+	margin: 0 auto;
+}
+
 .hotel-card-list {
+	display: flex;
+	flex-wrap: wrap;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .hotel-card {
-	width: 340px;
+	display: flex;
+	flex-direction: column;
+	max-width: 340px;
 }
 
 .hotel-card-title {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 700;
+	margin: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+/* Каталог Карточки Картинка */
+.hotel-card-image {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 16px;
+}
+
+/* Каталог Карточки Гостиницы и цена */
+.price-wrapper {
+	display: flex;
+	padding: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 16px;
+}
+
+.hotel-card-price {
+	margin: 0;
+	padding: 0;
+}
+
+.hotel-card-hotel {
+	width: 140px;
+	margin: 0;
+	padding: 0;
+	margin-right: 20px;
+}
+
+/* Каталог Карточки Кнопки*/
+.card-button {
+	display: flex;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	justify-content: space-between;
+}
+
+.button-more {
+	border-radius: 4px;
+	padding: 9px 15px 8px;
+}
+
+.button-favorites {
+	padding: 9px 15px 8px;
+	border-radius: 4px;
+}
+
+/* Рейтинг*/
+.raiting-wrapper {
+	display: flex;
+	margin-right: 20px;
+	margin-left: 20px;
+	align-items: center;
 }
 
 .hotel-raiting-star {
@@ -471,7 +564,11 @@ div {
 	line-height: 20px;
 	text-transform: uppercase;
 	background-color: #f2f2f2;
+	margin: 0;
+	padding: 9px 22px 8px 23px;
+	border-radius: 4px;
 }
+
 
 /* Сортировка */
 .catalog-hotels-card-filter-item {
@@ -488,15 +585,16 @@ div {
 .catalog-sorting-container {
 	display: flex;
 	justify-content: center;
-	width: 1057px;
+	max-width: 1057px;
 	height: 49px;
-	margin-top: 50px;
+	margin: 0 auto;
+	margin-bottom: 56px;
 }
 
 .select-control {
-	margin-right: 78px;
 	border: 2px solid #e5e5e5;
 	border-radius: 4px;
+	width: 290px;
 }
 
 .button-light {
@@ -509,7 +607,8 @@ div {
 .container-pagination {
 	display: flex;
 	flex-direction: row;
-	padding: 30px 25px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 }
 
 .pagination {
@@ -565,6 +664,7 @@ div {
 	line-height: 21px;
 	color: #333333;
 	align-items: center;
+	padding-right: 71px;
 }
 
 .select-page-number {
@@ -581,4 +681,15 @@ div {
 	border-radius: 4px;
 	width: 160px;
 	height: 49px;
+}
+
+.introduce-title-catalog {
+	margin: 0;
+	padding-top: 94px;
+	padding-bottom: 29px;
+}
+
+.introduce-description-catalog {
+	margin: 0;
+	padding-bottom: 46px;
 }
