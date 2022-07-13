@@ -349,6 +349,7 @@ body {
 .advantages-container {
 	background-color: #82b3d3;
 	padding: 91px 85px 92px;
+	flex-grow: 1;
 }
 
 .advantages-pictire {
@@ -391,6 +392,7 @@ body {
 
 .advantages-description {
 	margin: 0;
+	width: 230px;
 }
 
 .advantages-title-dignity {
@@ -401,7 +403,10 @@ body {
 
 .advantages-description-dignity {
 	margin: 0;
+	margin-left: 85px;
+	margin-right: 85px;
 	margin-bottom: 81px;
+	width: 230px;
 }
 
 .advantages-title-number {
@@ -1094,10 +1099,6 @@ body {
 	width: 160px;
 	height: 49px;
 }
-
-
-
-
 
 .modal-container {
 	position: fixed;
