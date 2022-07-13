@@ -330,10 +330,6 @@ body {
 	margin: 0;
 }
 
-div {
-	flex-grow: 1;
-}
-
 .advantages-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -636,6 +632,7 @@ div {
 	padding: 0;
 	border: none;
 	width: 150px;
+	flex-grow: 1;
 }
 
 .group-type-home {
@@ -1096,4 +1093,58 @@ div {
 	border-radius: 4px;
 	width: 160px;
 	height: 49px;
+}
+
+
+
+
+
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background: rgba(242, 242, 242, 0.8);
+	z-index: 2;
+}
+
+.modal {
+	position: relative;
+	margin: auto;
+	padding: 62px 70px 70px;
+	background-color: #ffffff;
+	border-radius: 30px;
+	flex-grow: 0;
+}
+
+.modal-hotel-search {
+	width: 575px;
+}
+
+.modal-button-close {
+	position: absolute;
+	padding: 0;
+	top: 54px;
+	right: 70;
+	width: 53px;
+	height: 53px;
+	background-color: #f2f2f2;
+	border: none;
+	background-image: url("../images/modal-close.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.modal-title {
+	margin: 0;
+	margin-bottom: 63px;
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
 }
