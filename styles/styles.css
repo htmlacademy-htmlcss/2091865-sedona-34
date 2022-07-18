@@ -786,26 +786,24 @@ body {
 }
 
 .control-input[type="checkbox"]:checked {
-	content: "";
-	background: url("../images/check.svg") no-repeat;
+	background-image: url("../images/check.svg");
+	background-repeat: no-repeat;
 	background-position: center;
-	background-color: #ffffff;
 }
 
 .control-input[type="radio"]:checked {
-	content: "";
-	background: url("../images/radio.svg") no-repeat;
+	background-image: url("../images/radio.svg");
+	background-repeat: no-repeat;
 	background-position: center;
-	background-color: #ffffff;
 }
 
 .control-input:hover {
 	background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input:focus {
+.control-input:focus-visible {
 	background-color: rgba(255, 255, 255, 0.6);
-	border: 3px solid #83b3d3;
+	outline: 3px solid #83b3d3;
 }
 
 .control-input:active {
@@ -813,7 +811,8 @@ body {
 }
 
 .control-input:disabled {
-	opacity: 0.5;
+	background-color: rgba(255, 255, 255, 0.3);
+	pointer-events: none;
 }
 
 /*Выбор цены*/
@@ -1256,7 +1255,7 @@ body {
 
 /* Модальное окно */
 .modal-container {
-	display: flex;
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -1264,6 +1263,10 @@ body {
 	height: 100%;
 	background: rgba(242, 242, 242, 0.8);
 	z-index: 2;
+}
+
+.modal-container-opened {
+	display: flex;
 }
 
 .modal {
@@ -1337,12 +1340,12 @@ body {
 	position: relative;
 	padding-top: 15px;
 	padding-bottom: 14px;
-	padding-left: 19px;
+	padding-left: 16px;
 	border-radius: 4px;
 	border: 2px solid transparent;
 	outline: none;
 	font-family: inherit;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;
 	color: #000000;
@@ -1359,7 +1362,8 @@ body {
 
 .date-form-field:focus {
 	background-color: #e6e6e6;
-	border: 3px solid #83b3d3;
+	border: 2px solid #83b3d3;
+	box-shadow: inset 0 0 0 1px #83b3d3;
 }
 
 .date-form-field:active {
@@ -1395,12 +1399,26 @@ body {
 	border: none;
 	outline: none;
 	font-family: inherit;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;
 	color: #000000;
 	background: #f2f2f2;
 	box-sizing: border-box;
+}
+
+.adult-form-field:hover {
+	background-color: #e6e6e6;
+}
+
+.adult-form-field:focus {
+	background-color: #e6e6e6;
+	box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.adult-form-field:active {
+	color: #000000;
+	background-color: #ffffff;
 }
 
 .button-guest {
@@ -1479,13 +1497,27 @@ body {
 	border: none;
 	outline: none;
 	font-family: inherit;
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 21px;
 	color: #000000;
 	background: #f2f2f2;
 	box-sizing: border-box;
 	width: 133px;
+}
+
+.field-number-children:hover {
+	background-color: #e6e6e6;
+}
+
+.field-number-children:focus {
+	background-color: #e6e6e6;
+	box-shadow: inset 0 0 0 3px #83b3d3;
+}
+
+.field-number-children:active {
+	color: #000000;
+	background-color: #ffffff;
 }
 
 .modal-label-title-child {
@@ -1508,7 +1540,7 @@ body {
 	border: none;
 	width: 25px;
 	height: 25px;
-	background-color: #83b3d3;
+	background: #83b3d3 url("../images/info.svg") no-repeat center / cover;
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -1564,9 +1596,9 @@ body {
 	background-color: #e6e6e6;
 }
 
-.modal-button-close:focus {
+.modal-button-close:focus-visible {
 	background-color: #e6e6e6;
-	border: 3px solid #83b3d3;
+	outline: 3px solid #83b3d3;
 }
 
 .modal-button-close:active {
@@ -1574,7 +1606,7 @@ body {
 	opacity: 0.3;
 }
 
-.button-modal-form-search:focus {
+.button-modal-form-search:focus-visible {
 	background-color: #68a2ca;
-	border: 3px solid #756257;
+	outline: 3px solid #756257;
 }
