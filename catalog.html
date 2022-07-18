@@ -75,26 +75,26 @@
 					<fieldset class="catalog-filter-group">
 						<legend class="catalog-filter-title">Инфраструктура</legend>
 						<label class="control" for="pool">
-							<input class="control-input" type="checkbox" id="pool" name="infrastructure" value="pool" checked>
+							<input class="control-input" type="checkbox" id="pool" name="infrastructure" value="pool" checked required>
 							<span class="control-label">Бассейн</span>
 						</label>
 						<label class="control" for="parking">
-							<input class="control-input" type="checkbox" id="parking" name="infrastructure" value="parking" checked>Парковка
+							<input class="control-input" type="checkbox" id="parking" name="infrastructure" value="parking" checked required>Парковка
 						</label>
 						<label class="control" for="wi-fi">
-							<input class="control-input" type="checkbox" id="wi-fi" name="infrastructure" value="wi-fi">Wi-fi
+							<input class="control-input" type="checkbox" id="wi-fi" name="infrastructure" value="wi-fi" required>Wi-Fi
 						</label>
 					</fieldset>
 					<fieldset class="catalog-filter-group group-type-home">
 						<legend class="catalog-filter-title">Тип жилья:</legend>
 						<label class="control" for="type-hotel">
-							<input class="control-input" type="radio" id="type-hotel" name="type-of-hotels" value="hotel" checked>Гостиница
+							<input class="control-input" type="radio" id="type-hotel" name="type-of-hotels" value="hotel" checked required>Гостиница
 						</label>
 						<label class="control" for="type-motel">
-							<input class="control-input" type="radio" id="type-motel" name="type-of-hotels" value="motel">Мотель
+							<input class="control-input" type="radio" id="type-motel" name="type-of-hotels" value="motel" required>Мотель
 						</label>
 						<label class="control" for="type-apartments">
-							<input class="control-input" type="radio" id="type-apartments" name="type-of-hotels" value="apartment">Апартаменты
+							<input class="control-input" type="radio" id="type-apartments" name="type-of-hotels" value="apartment" required>Апартаменты
 						</label>
 					</fieldset>
 					<fieldset class="catalog-filter-group group-type-price">
@@ -102,11 +102,11 @@
 						<div class="input-price">
 							<label class="control-price control-price-min" for="min-value">
 								<span class="price-min">от</span>
-								<input class="price-value price-value-from" type="text" id="min-value" name="min-value" value="0" placeholder="0">
+								<input class="price-value price-value-from" type="text" id="min-value" name="min-value" value="0" placeholder="0" required>
 							</label>
 							<label class="control-price control-price-max" for="max-value">
 								<span class="price-max">до</span>
-								<input class="price-value price-value-to" type="text" id="max-value" name="max-value" value="9000" placeholder="9000">
+								<input class="price-value price-value-to" type="text" id="max-value" name="max-value" value="9000" placeholder="9000" required>
 							</label>
 						</div>
 						<div class="range-scale">
@@ -162,7 +162,7 @@
 							</a>
 							<div class="price-wrapper">
 								<p class="hotel-card-hotel">Гостиница</p>
-								<p class="hotel-card-price">От 4000 р</p>
+								<p class="hotel-card-price">От 4000 &#8381;</p>
 							</div>
 							<a href="#" class="button button-brown button-more">Подробнее</a>
 							<button type="button" class="button button-blue">В избранное</button>
@@ -175,14 +175,14 @@
 					<li class="hotel-card">
 						<div class="hotel-card-wrapper">
 							<a href="#" class="hotel-link">
-								<img class="hotel-card-image-2" src="images/hotel-2.jpg" width="300" height="211" alt="Цепочка массивных скал на фоне радуги в дождливую погоду.">
+								<img class="hotel-card-image" src="images/hotel-2.jpg" width="300" height="211" alt="Цепочка массивных скал на фоне радуги в дождливую погоду.">
 							</a>
 							<a href="#" class="hotel-link">
 								<h2 class="hotel-card-title">Villas at Poco Diablo</h2>
 							</a>
 							<div class="price-wrapper">
 								<p class="hotel-card-hotel">Гостиница</p>
-								<p class="hotel-card-price">От 5000 р</p>
+								<p class="hotel-card-price">От 5000 &#8381;</p>
 							</div>
 							<a href="#" class="button button-brown">Подробнее</a>
 							<button type="button" class="button button-green">В избранном</button>
@@ -195,14 +195,14 @@
 					<li class="hotel-card">
 						<div class="hotel-card-wrapper">
 							<a href="#" class="hotel-link">
-								<img class="hotel-card-image-3" src="images/hotel-3.jpg" width="300" height="211" alt="Большая гора из красного камня.">
+								<img class="hotel-card-image" src="images/hotel-3.jpg" width="300" height="211" alt="Большая гора из красного камня.">
 							</a>
 							<a href="#" class="hotel-link">
 								<h2 class="hotel-card-title">Desert Quail Inn</h2>
 							</a>
 							<div class="price-wrapper">
 								<p class="hotel-card-hotel">Гостиница</p>
-								<p class="hotel-card-price">От 2500 р</p>
+								<p class="hotel-card-price">От 2500 &#8381;</p>
 							</div>
 							<a href="#" class="button button-brown">Подробнее</a>
 							<button type="button" class="button button-blue">В избранное</button>
@@ -215,14 +215,14 @@
 					<li class="hotel-card">
 						<div class="hotel-card-wrapper">
 							<a href="#" class="hotel-link">
-								<img class="hotel-card-image-4" src="images/hotel-4.jpg" width="300" height="211" alt="Массивные горы на фоне ночного неба с множеством звезд.">
+								<img class="hotel-card-image" src="images/hotel-4.jpg" width="300" height="211" alt="Массивные горы на фоне ночного неба с множеством звезд.">
 							</a>
 							<a href="#" class="hotel-link">
 								<h2 class="hotel-card-title">GreenTree Inn</h2>
 							</a>
 							<div class="price-wrapper">
 								<p class="hotel-card-hotel">Гостиница</p>
-								<p class="hotel-card-price">От 1500 р</p>
+								<p class="hotel-card-price">От 1500 &#8381;</p>
 							</div>
 							<a href="#" class="button button-brown">Подробнее</a>
 							<button type="button" class="button button-blue">В избранное</button>
@@ -270,7 +270,7 @@
 				</p>
 				<form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
 					<label class="visually-hidden" for="newsletter-email">e-mail</label>
-					<input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email">
+					<input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
 					<button class="button button-blue button-blue-newsletter" type="submit">
 						<span class="newsletter-description">Подписаться</span>
 					</button>
